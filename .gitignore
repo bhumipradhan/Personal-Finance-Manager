@@ -1,2 +1,9 @@
 node_modules/
 .env
+.claude
+.agents
+.cursor
+.devin
+.windsurf
+prisma7.config.ts
+skills-lock.json
