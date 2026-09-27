@@ -7,7 +7,7 @@
             "port": 5432,
             "driver": "PostgreSQL",
             "name": "postgresconn",
-            "database": "demo",
+            "database": "expenses_db",
             "username": "postgres"
         }
     ]
