@@ -36,4 +36,23 @@ model Transaction{
   updateAT DateTime @updateAT @map("update_at)
 
   category Category @relation(fields: [categoryId], references: [id])
+
+  @@index([categoryId])
+  @@index([date])
+  @@map("transactions")
+}
+
+model Category{
+  id String @id @default(uuid())
+  name String
+  color String?
+  type TransactionType
+  isDefault Boolean @default(false) @map("is_default")
+  createdAt DateTime @default(now()) @map("created_at)
+
+  transactions Transaction[]
+  budgets Budget[]
+
+  @unique([name,type])
+  @@map("categories)
 }
