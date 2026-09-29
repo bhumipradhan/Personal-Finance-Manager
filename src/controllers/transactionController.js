@@ -15,7 +15,7 @@ const createTransaction = async (req, res) =>{
     res.status(201).json(newTransaction);
 }
 catch(error){
-    res.status(500).json("Server Error!");
+    res.status(500).json({error:"Something went wrong!"});
 }
 };
 
